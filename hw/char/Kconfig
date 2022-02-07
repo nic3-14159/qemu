@@ -33,6 +33,12 @@ config SERIAL_PCI_MULTI
     depends on PCI
     select SERIAL
 
+config SERIAL_OXPCIE
+    bool
+    default y if PCI_DEVICES
+    depends on PCI
+    select SERIAL
+
 config VIRTIO_SERIAL
     bool
     default y
